@@ -3,12 +3,18 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter value for side a: ");
-        int a = scanner.nextInt();
-        System.out.println("Enter value for side b: ");
-        int b = scanner.nextInt();
-        int c = (int) Math.sqrt(a * a + b * b);
-        System.out.println("The length of the hypotenuse c is: " + c);
+
+        System.out.println("Enter the length of one side of the square base: ");
+        int baseLength = scanner.nextInt();
+
+        System.out.println("Enter the height of the pyramid: ");
+        int height = scanner.nextInt();
+
+        int baseArea = baseLength * baseLength;
+        double volume = (1.0 / 3.0) * baseArea * height;
+
+        System.out.println("The volume of the pyramid is: " + volume);
+
         scanner.close();
     }
 }
