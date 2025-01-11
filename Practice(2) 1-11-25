@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the base length of the pyramid: ");
+        int baseLength = scanner.nextInt();
+        
+        System.out.print("Enter the slant height of the pyramid: ");
+        int slantHeight = scanner.nextInt();
+        
+        int baseArea = baseLength * baseLength;
+        int perimeter = 4 * baseLength;
+        
+        double lateralSurfaceArea = 0.5 * perimeter * slantHeight;
+        double totalSurfaceArea = baseArea + lateralSurfaceArea;
+        
+        System.out.println("\n---- Surface Area Calculation ----");
+        System.out.println("Base Length: " + baseLength);
+        System.out.println("Slant Height: " + slantHeight);
+        System.out.println("Base Area: " + baseArea + " square units");
+        System.out.println("Perimeter of Base: " + perimeter + " units");
+        System.out.println("Lateral Surface Area: " + lateralSurfaceArea + " square units");
+        System.out.println("Total Surface Area of the Pyramid: " + totalSurfaceArea + " square units");
+        
+        scanner.close();
+    }
+}
