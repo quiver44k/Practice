@@ -1,0 +1,25 @@
+abstract class Bugatti {
+    public abstract int getTopSpeed(); 
+}
+
+class BugattiVeyron extends Bugatti {
+    public int getTopSpeed() {
+        return 253; 
+    }
+}
+
+class BugattiChiron extends Bugatti {
+    public int getTopSpeed() {
+        return 261; 
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Bugatti car1 = new BugattiVeyron();
+        Bugatti car2 = new BugattiChiron();
+
+        System.out.println("Bugatti Veyron top speed: " + car1.getTopSpeed() + " mph");
+        System.out.println("Bugatti Chiron top speed: " + car2.getTopSpeed() + " mph");
+    }
+}
