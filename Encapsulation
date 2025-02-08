@@ -1,0 +1,46 @@
+class Lamborghini {
+    private String model;
+    private int speed;
+
+    public Lamborghini(String model, int speed) {
+        this.model = model;
+        this.speed = speed;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        if(speed > 0) {
+            this.speed = speed;
+        }
+    }
+
+    public void displayDetails() {
+        System.out.println("Model: " + model);
+        System.out.println("Speed: " + speed + " mph");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Lamborghini car = new Lamborghini("Aventador", 217);
+        System.out.println("Initial car details:");
+        car.displayDetails();
+
+        car.setModel("Huracan");
+        car.setSpeed(205);
+
+        System.out.println("\nModified car details:");
+        car.displayDetails();
+    }
+}
