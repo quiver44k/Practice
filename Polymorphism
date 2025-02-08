@@ -1,0 +1,23 @@
+
+class Lamborghini {
+   
+    void model() {
+        System.out.println("I am a Lamborghini.");
+    }
+}
+
+class Huracan extends Lamborghini {
+    void model() {
+        System.out.println("I am a Huracan.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Lamborghini car = new Huracan();
+
+       
+        car.model();  
+    }
+}
